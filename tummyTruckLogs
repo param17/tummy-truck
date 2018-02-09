@@ -1,0 +1,16 @@
+19:41:01,129 ERROR RestaurantService:30 - Restaurant you are looking for not found :(
+19:41:01,132 ERROR RestaurantService:43 - Exception occurred while adding the restaurant!
+19:41:01,133 ERROR RestaurantService:44 - 
+19:41:01,135 ERROR RestaurantService:57 - Exception occurred while finding the restaurant!
+19:41:01,136 ERROR RestaurantService:58 - 
+19:41:01,137 ERROR RestaurantService:30 - Restaurant you are looking for not found :(
+19:41:01,137 ERROR RestaurantService:57 - Exception occurred while finding the restaurant!
+19:41:01,137 ERROR RestaurantService:58 - Restaurant you are looking for not found :(
+19:57:10,635 ERROR RestaurantService:30 - Restaurant you are looking for not found :(
+19:57:10,639 ERROR RestaurantService:43 - Exception occurred while adding the restaurant!
+19:57:10,639 ERROR RestaurantService:44 - 
+19:57:10,642 ERROR RestaurantService:57 - Exception occurred while finding the restaurant!
+19:57:10,642 ERROR RestaurantService:58 - 
+19:57:10,643 ERROR RestaurantService:30 - Restaurant you are looking for not found :(
+19:57:10,648 ERROR RestaurantService:57 - Exception occurred while finding the restaurant!
+19:57:10,648 ERROR RestaurantService:58 - Restaurant you are looking for not found :(
