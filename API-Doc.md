@@ -135,7 +135,7 @@ Example Output:
 ```
 
 ---
-
+---
 
 
 ## Menu
@@ -177,7 +177,7 @@ Example Output:
             "rating": "4.0"
         }
     }
-]ccdf 
+]
 ```
 
 ### 2. GET http://localhost:8080/tummytruck/api/restaurants/{r_id}/menus/{id}
@@ -206,7 +206,7 @@ Example Output:
 }
 ```
 
-### 3. POST http://localhost:8080/tummytruck/api/restaurants/
+### 3. POST http://localhost:8080/tummytruck/api/restaurants/{r_id}/menus
 This api posts (create) new menu with given specific values in the database for particular restaurant and returns the specific message with if object is created.
 
 Example Input:
@@ -229,7 +229,7 @@ Example Output:
 Menu information saved successfully with id 17
 ```
 
-### 4. DELETE http://localhost:8080/tummytruck/api/restaurants/{id}
+### 4. DELETE http://localhost:8080/tummytruck/api/restaurants/{r_id}/menus/{id}
 This api delete existing restaurant's menu with given specific key (id) in the database and returns nothing wih correct status code.
 
 Example Input:
@@ -238,7 +238,7 @@ http://localhost:8080/tummytruck/api/restaurants/101/menus/17
 ```
 
 
-### 5. GET http://localhost:8080/tummytruck/api/restaurants/find/{nameText}
+### 5. GET http://localhost:8080/tummytruck/api/restaurants/{r_id}/menus/find/{nameText}
 This api fetches all the restaurant's menu records available in the database matching with the input menu name.
 
 Example Input:
@@ -259,6 +259,183 @@ Example Output:
             "name": "Adam Shakes",
             "rating": "4.0"
         }
+    }
+]
+```
+---
+---
+
+
+## Menu Item
+
+### 1. GET http://localhost:8080/tummytruck/api/restaurants/{r_id}/menus/{m_id}/items/
+This api fetches all the food items in a menu (m_id) available in the database for the specific restaurant (r_id)
+
+
+Example Input:
+```Json
+http://localhost:8080/tummytruck/api/restaurants/101/menus/1/items
+```
+
+
+Example Output:
+```JSON
+[
+    {
+        "description": "Duhh Pizzzzzaaaaa",
+        "id": 1,
+        "menu": {
+            "description": "First meal of the day",
+            "id": 1,
+            "name": "BreakFast",
+            "restaurant": {
+                "address": "Denver",
+                "contact": "7548542371",
+                "id": 101,
+                "name": "Adam Shakes",
+                "rating": "4.0"
+            }
+        },
+        "name": "Pizza",
+        "price": "7.99"
+    },
+    {
+        "description": "Duhh Passsttaaaaaa",
+        "id": 7,
+        "menu": {
+            "description": "First meal of the day",
+            "id": 1,
+            "name": "BreakFast",
+            "restaurant": {
+                "address": "Denver",
+                "contact": "7548542371",
+                "id": 101,
+                "name": "Adam Shakes",
+                "rating": "4.0"
+            }
+        },
+        "name": "Pasta",
+        "price": "7.95"
+    }
+]
+```
+
+### 2. GET http://localhost:8080/tummytruck/api/restaurants/{r_id}/menus/{m_id}/items/{id}
+This api fetches the food item in menu with given specific id from the database for given restaurant id
+
+
+Example Input:
+```Json
+http://localhost:8080/tummytruck/api/restaurants/101/menus/1/items/7
+```
+
+
+Example Output:
+```JSON
+{
+    "description": "Duhh Passsttaaaaaa",
+    "id": 7,
+    "menu": {
+        "description": "First meal of the day",
+        "id": 1,
+        "name": "BreakFast",
+        "restaurant": {
+            "address": "Denver",
+            "contact": "7548542371",
+            "id": 101,
+            "name": "Adam Shakes",
+            "rating": "4.0"
+        }
+    },
+    "name": "Pasta",
+    "price": "7.95"
+}
+```
+
+### 3. POST http://localhost:8080/tummytruck/api/restaurants/{r_id}/menus/{m_id}/items/
+This api posts (create) new menu item with given specific values in the database for particular menu at particular restaurant and returns the specific message with if object is created.
+
+Example Input:
+```JSON
+{
+    "description": "Duhh Sushhhiiiiii",
+    "menu": {
+        "description": "First meal of the day",
+        "id": 1,
+        "name": "BreakFast",
+        "restaurant": {
+            "address": "Denver",
+            "contact": "7548542371",
+            "id": 101,
+            "name": "Adam Shakes",
+            "rating": "4.0"
+        }
+    },
+    "name": "Sushi",
+    "price": "11.95"
+}
+```
+
+Example Output: 
+```JSON
+Menu item information saved successfully with id 8
+```
+
+### 4. DELETE http://localhost:8080/tummytruck/api/restaurants/{r_id}/menus/{m_id}/items/{id}
+This api delete existing restaurant's menu's menu item with given specific key (id) in the database and returns nothing wih correct status code.
+
+Example Input:
+```Json
+http://localhost:8080/tummytruck/api/restaurants/101/menus/1/items/8
+```
+
+
+### 5. GET http://localhost:8080/tummytruck/api/restaurants/{r_id}/menus/{m_id}/items/find/{nameText}
+This api fetches all the restaurant's menu's menu item records available in the database matching with the input menu item name.
+
+Example Input:
+```Json
+http://localhost:8080/tummytruck/api/restaurants/101/menus/1/items/find/P
+```
+
+Example Output:
+```JSON
+[
+    {
+        "description": "Duhh Pizzzzzaaaaa",
+        "id": 1,
+        "menu": {
+            "description": "First meal of the day",
+            "id": 1,
+            "name": "BreakFast",
+            "restaurant": {
+                "address": "Denver",
+                "contact": "7548542371",
+                "id": 101,
+                "name": "Adam Shakes",
+                "rating": "4.0"
+            }
+        },
+        "name": "Pizza",
+        "price": "7.99"
+    },
+    {
+        "description": "Duhh Passsttaaaaaa",
+        "id": 7,
+        "menu": {
+            "description": "First meal of the day",
+            "id": 1,
+            "name": "BreakFast",
+            "restaurant": {
+                "address": "Denver",
+                "contact": "7548542371",
+                "id": 101,
+                "name": "Adam Shakes",
+                "rating": "4.0"
+            }
+        },
+        "name": "Pasta",
+        "price": "7.95"
     }
 ]
 ```
