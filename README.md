@@ -1,6 +1,8 @@
 # Tummy Truck
 REST API to simulate part of an online food ordering system.
 
+---
+
 ## Technologies Used
 * Spring
 * Hibernate
@@ -10,6 +12,8 @@ REST API to simulate part of an online food ordering system.
 * Maven
 * Log4j
 * Jersey
+
+---
 
 ## Steps to Setup and Run
 1. Install Tomcat (or any application server)
@@ -32,6 +36,8 @@ REST API to simulate part of an online food ordering system.
 11. Now, you can run the REST APIs using any REST Client (Postman, Advanced REST Client, or DHC REST Client)
 12. Enjoy!
 
+---
+
 ## Notes on implementation details
 * I started with working on basic details and structure of REST by implementing the GET, PUT, DELETE, with few more.
 * Used sub-resources for linking Restaurants with Menu and with MenuItems.
@@ -43,3 +49,8 @@ REST API to simulate part of an online food ordering system.
 * I tried to write as much JUnits possible, I think I wrote about 36ish. I've used JMockito framework, Since I feel more confortable with it and I believe it's more readable.
 * I'm logging the exceptions using log4j, with customization properties.
 * I've added the pom.xml for the project including all the libraries used. I've used Java 1.8 for development on my system with MySQL 5.7.21 and Tomcat 9.0.4 and coding on Eclipse Oxygen.
+
+---
+
+## API Doc
+Please refer to this file [API-Doc.md](../blob/master/API-Doc.md)
