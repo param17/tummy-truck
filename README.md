@@ -1,4 +1,6 @@
-# Tummy Truck ![alt text](https://github.com/param17/tummy-truck/blob/master/tummy-truck.png "Tummy Truck Logo")
+# Tummy Truck
+   ![alt text](https://github.com/param17/tummy-truck/blob/master/tummy-truck.png "Tummy Truck Logo")
+
 REST API to simulate part of an online food ordering system.
 
 ---
