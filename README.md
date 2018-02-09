@@ -23,10 +23,10 @@ REST API to simulate part of an online food ordering system.
     CREATE DATABASE tummytruck;
     USE tummytruck;
     ```
-4. Run the MySQL script to create the necessary tables. Script is at [init.sql](../blob/master/src/main/scripts/init.sql)
-5. Update the user credetials for MySQL in [spring-hibernate-jersey2.xml](../blob/master/src/main/webapp/WEB-INF/spring-hibernate-jersey2.xml)
-6. Update the log location at [log4j.properties](../blob/master/src/main/resources/log4j.properties)
-7. Change the overflow filesystem location for ehcache at [ehcache.xml](../blob/master/src/main/resources/ehcache.xml)
+4. Run the MySQL script to create the necessary tables. Script is at [init.sql](../master/src/main/scripts/init.sql)
+5. Update the user credetials for MySQL in [spring-hibernate-jersey2.xml](../master/src/main/webapp/WEB-INF/spring-hibernate-jersey2.xml)
+6. Update the log location at [log4j.properties](../master/src/main/resources/log4j.properties)
+7. Change the overflow filesystem location for ehcache at [ehcache.xml](../master/src/main/resources/ehcache.xml)
 8. Go to project directory and run following command on terminal
     ```bash
     mvn clean install
@@ -53,4 +53,4 @@ REST API to simulate part of an online food ordering system.
 ---
 
 ## API Doc
-Please refer to this file [API-Doc.md](../blob/master/API-Doc.md)
+Please refer to this file [API-Doc.md](../master/API-Doc.md)
